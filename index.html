@@ -1,188 +1,288 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grupo Soltalius | Seguridad, Telecomunicaciones y Electricidad</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grupo Soltalius | Seguridad, Telecomunicaciones y Electricidad</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    html { scroll-behavior: smooth; }
+    .glass { background: rgba(255,255,255,0.08); backdrop-filter: blur(12px); }
+  </style>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans">
 
-    <header class="bg-white shadow-md sticky top-0 z-50">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-2xl font-bold text-blue-600 tracking-wider">
-                GRUPO <span class="text-orange-500">SOLTALIUS</span>
-            </div>
-            <nav class="hidden md:flex space-x-8 font-medium">
-                <a href="#inicio" class="hover:text-blue-600 transition">Inicio</a>
-                <a href="#servicios" class="hover:text-blue-600 transition">Servicios</a>
-                <a href="#nosotros" class="hover:text-blue-600 transition">¿Por qué nosotros?</a>
-                <a href="#contacto" class="hover:text-blue-600 transition">Contacto</a>
-            </nav>
-            <a href="https://wa.me/18094447292" target="_blank" class="bg-green-500 text-white px-5 py-2 rounded-full font-semibold hover:bg-green-600 transition flex items-center gap-2">
-                <i class="fab fa-whatsapp"></i> Escríbenos
-            </a>
+<body class="bg-slate-950 text-white font-sans">
+
+  <!-- HEADER -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-slate-950/80 backdrop-blur border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <div class="text-2xl font-black tracking-widest">
+        <span class="text-blue-500">GRUPO</span>
+        <span class="text-orange-500">SOLTALIUS</span>
+      </div>
+
+      <nav class="hidden md:flex gap-8 text-sm font-semibold">
+        <a href="#inicio" class="hover:text-orange-400">Inicio</a>
+        <a href="#servicios" class="hover:text-orange-400">Servicios</a>
+        <a href="#proyectos" class="hover:text-orange-400">Proyectos</a>
+        <a href="#contacto" class="hover:text-orange-400">Contacto</a>
+      </nav>
+
+      <a href="https://wa.me/18094447292" target="_blank"
+        class="bg-green-500 hover:bg-green-600 px-5 py-2 rounded-full font-bold flex items-center gap-2">
+        <i class="fab fa-whatsapp"></i> Escríbenos
+      </a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="inicio" class="min-h-screen flex items-center pt-28 bg-gradient-to-br from-slate-950 via-blue-950 to-slate-900">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <p class="text-orange-400 font-bold mb-4 tracking-widest">SEGURIDAD • REDES • ELECTRICIDAD</p>
+        <h1 class="text-5xl md:text-7xl font-black leading-tight mb-6">
+          Soluciones inteligentes para hogares y empresas
+        </h1>
+        <p class="text-gray-300 text-lg mb-8">
+          En Grupo Soltalius protegemos, conectamos y optimizamos tus espacios con sistemas de seguridad,
+          telecomunicaciones y servicios eléctricos profesionales.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="#contacto" class="bg-orange-500 hover:bg-orange-600 px-8 py-4 rounded-xl font-bold text-center">
+            Solicitar cotización
+          </a>
+          <a href="#servicios" class="border border-white/30 hover:bg-white hover:text-slate-950 px-8 py-4 rounded-xl font-bold text-center">
+            Ver servicios
+          </a>
         </div>
-    </header>
+      </div>
 
-    <section id="inicio" class="bg-gradient-to-r from-slate-900 to-blue-900 text-white py-24 px-6 text-center">
-        <div class="max-w-3xl mx-auto">
-            <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
-                Soluciones Integrales en Seguridad, Energía y Conectividad
-            </h1>
-            <p class="text-lg md:text-xl text-gray-300 mb-8">
-                Protegemos y conectamos lo que más te importa. Ingeniería experta para tu hogar, comercio o empresa.
-            </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#contacto" class="bg-orange-500 text-white font-bold px-8 py-4 rounded-lg hover:bg-orange-600 transition shadow-lg">
-                    Solicita una Cotización Gratis
-                </a>
-                <a href="https://wa.me/18094447292" target="_blank" class="bg-transparent border-2 border-white text-white font-bold px-8 py-4 rounded-lg hover:bg-white hover:text-slate-900 transition">
-                    <i class="fab fa-whatsapp mr-2"></i> Soporte por WhatsApp
-                </a>
-            </div>
+      <div class="glass rounded-3xl p-8 border border-white/10 shadow-2xl">
+        <div class="grid grid-cols-2 gap-4">
+          <div class="bg-white/10 p-6 rounded-2xl">
+            <i class="fas fa-video text-4xl text-orange-400 mb-4"></i>
+            <h3 class="font-bold text-xl">CCTV</h3>
+            <p class="text-gray-300 text-sm">Cámaras IP y seguridad 24/7.</p>
+          </div>
+          <div class="bg-white/10 p-6 rounded-2xl">
+            <i class="fas fa-network-wired text-4xl text-blue-400 mb-4"></i>
+            <h3 class="font-bold text-xl">Redes</h3>
+            <p class="text-gray-300 text-sm">Cableado, WiFi y datos.</p>
+          </div>
+          <div class="bg-white/10 p-6 rounded-2xl">
+            <i class="fas fa-bolt text-4xl text-yellow-400 mb-4"></i>
+            <h3 class="font-bold text-xl">Electricidad</h3>
+            <p class="text-gray-300 text-sm">Instalaciones y mantenimiento.</p>
+          </div>
+          <div class="bg-white/10 p-6 rounded-2xl">
+            <i class="fas fa-shield-halved text-4xl text-green-400 mb-4"></i>
+            <h3 class="font-bold text-xl">Control</h3>
+            <p class="text-gray-300 text-sm">Acceso, alarmas y monitoreo.</p>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <section id="servicios" class="py-20 px-6 container mx-auto">
-        <div class="text-center mb-16">
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Nuestros Servicios Especializados</h2>
-            <p class="text-gray-600 max-w-2xl mx-auto">Ofrecemos un catálogo completo de soluciones técnicas con los más altos estándares de calidad.</p>
+  <!-- STATS -->
+  <section class="py-16 bg-slate-900 border-y border-white/10">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      <div>
+        <h2 class="text-4xl font-black text-orange-400">100+</h2>
+        <p class="text-gray-400">Proyectos realizados</p>
+      </div>
+      <div>
+        <h2 class="text-4xl font-black text-blue-400">24/7</h2>
+        <p class="text-gray-400">Soporte técnico</p>
+      </div>
+      <div>
+        <h2 class="text-4xl font-black text-green-400">50+</h2>
+        <p class="text-gray-400">Clientes satisfechos</p>
+      </div>
+      <div>
+        <h2 class="text-4xl font-black text-yellow-400">5+</h2>
+        <p class="text-gray-400">Años de experiencia</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section id="servicios" class="py-24 bg-slate-950">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <p class="text-orange-400 font-bold tracking-widest">NUESTROS SERVICIOS</p>
+        <h2 class="text-4xl md:text-5xl font-black mt-3">Soluciones especializadas</h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white text-slate-900 p-8 rounded-3xl shadow-xl">
+          <i class="fas fa-camera text-4xl text-red-500 mb-5"></i>
+          <h3 class="text-2xl font-black mb-4">Sistemas de Seguridad</h3>
+          <ul class="space-y-3 text-gray-700">
+            <li>✅ Cámaras CCTV e IP</li>
+            <li>✅ Alarmas contra robo</li>
+            <li>✅ Control de acceso</li>
+            <li>✅ Monitoreo remoto</li>
+          </ul>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl transition flex flex-col justify-between">
-                <div>
-                    <div class="w-14 h-14 bg-red-100 text-red-600 rounded-xl flex items-center justify-center text-2xl mb-6">
-                        <i class="fas fa-camera"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4">Sistemas de Seguridad</h3>
-                    <ul class="space-y-3 text-gray-600">
-                        <li><i class="fas fa-check text-green-500 mr-2"></i> Instalación de cámaras CCTV e IP</li>
-                        <li><i class="fas fa-check text-green-500 mr-2"></i> Alarmas contra robos e incendios</li>
-                        <li><i class="fas fa-check text-green-500 mr-2"></i> Control de acceso biométrico</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl transition flex flex-col justify-between">
-                <div>
-                    <div class="w-14 h-14 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center text-2xl mb-6">
-                        <i class="fas fa-network-wired"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4">Telecomunicaciones y Redes</h3>
-                    <ul class="space-y-3 text-gray-600">
-                        <li><i class="fas fa-check text-green-500 mr-2"></i> Cableado estructurado (Voz y Datos)</li>
-                        <li><i class="fas fa-check text-green-500 mr-2"></i> Redes Wi-Fi empresariales</li>
-                        <li><i class="fas fa-check text-green-500 mr-2"></i> Enlaces inalámbricos y Telefonía IP</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl transition flex flex-col justify-between">
-                <div>
-                    <div class="w-14 h-14 bg-yellow-100 text-yellow-600 rounded-xl flex items-center justify-center text-2xl mb-6">
-                        <i class="fas fa-bolt"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4">Servicios Eléctricos</h3>
-                    <ul class="space-y-3 text-gray-600">
-                        <li><i class="fas fa-check text-green-500 mr-2"></i> Instalaciones residenciales e industriales</li>
-                        <li><i class="fas fa-check text-green-500 mr-2"></i> Mantenimiento de paneles eléctricos</li>
-                        <li><i class="fas fa-check text-green-500 mr-2"></i> Inversores, UPS y plantas eléctricas</li>
-                    </ul>
-                </div>
-            </div>
+        <div class="bg-white text-slate-900 p-8 rounded-3xl shadow-xl">
+          <i class="fas fa-wifi text-4xl text-blue-500 mb-5"></i>
+          <h3 class="text-2xl font-black mb-4">Redes y Telecomunicaciones</h3>
+          <ul class="space-y-3 text-gray-700">
+            <li>✅ Cableado estructurado</li>
+            <li>✅ Redes WiFi empresariales</li>
+            <li>✅ Fibra óptica</li>
+            <li>✅ Telefonía IP</li>
+          </ul>
         </div>
-    </section>
 
-    <section id="nosotros" class="bg-blue-50 py-20 px-6">
-        <div class="container mx-auto">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">¿Por qué Elegir a Grupo Soltalius?</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">Nos enfocamos en brindar un servicio de excelencia basado en la confianza, la alta capacitación técnica y la tranquilidad de nuestros clientes.</p>
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="bg-white p-6 rounded-2xl shadow-sm text-center border border-blue-100 hover:shadow-md transition">
-                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xl mx-auto mb-4">
-                        <i class="fas fa-user-shield"></i>
-                    </div>
-                    <h4 class="text-lg font-bold mb-2 text-slate-900">Personal Certificado</h4>
-                    <p class="text-gray-600 text-sm">Contamos con ingenieros y técnicos expertos altamente capacitados para garantizar instalaciones normadas y seguras.</p>
-                </div>
-                <div class="bg-white p-6 rounded-2xl shadow-sm text-center border border-blue-100 hover:shadow-md transition">
-                    <div class="w-12 h-12 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center text-xl mx-auto mb-4">
-                        <i class="fas fa-award"></i>
-                    </div>
-                    <h4 class="text-lg font-bold mb-2 text-slate-900">Garantía Real</h4>
-                    <p class="text-gray-600 text-sm">Aseguramos la máxima durabilidad ofreciendo un respaldo sólido por escrito en cada equipo e instalación realizada.</p>
-                </div>
-                <div class="bg-white p-6 rounded-2xl shadow-sm text-center border border-blue-100 hover:shadow-md transition">
-                    <div class="w-12 h-12 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-xl mx-auto mb-4">
-                        <i class="fas fa-headset"></i>
-                    </div>
-                    <h4 class="text-lg font-bold mb-2 text-slate-900">Soporte Continuo</h4>
-                    <p class="text-gray-600 text-sm">No te dejamos solo. Ofrecemos una excelente asistencia post-venta y planes de mantenimiento preventivo.</p>
-                </div>
-                <div class="bg-white p-6 rounded-2xl shadow-sm text-center border border-blue-100 hover:shadow-md transition">
-                    <div class="w-12 h-12 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center text-xl mx-auto mb-4">
-                        <i class="fas fa-hand-holding-usd"></i>
-                    </div>
-                    <h4 class="text-lg font-bold mb-2 text-slate-900">Presupuestos Justos</h4>
-                    <p class="text-gray-600 text-sm">Evaluamos detalladamente tus necesidades para entregarte cotizaciones transparentes y a tu medida, sin costos sorpresa.</p>
-                </div>
-            </div>
+        <div class="bg-white text-slate-900 p-8 rounded-3xl shadow-xl">
+          <i class="fas fa-plug-circle-bolt text-4xl text-yellow-500 mb-5"></i>
+          <h3 class="text-2xl font-black mb-4">Servicios Eléctricos</h3>
+          <ul class="space-y-3 text-gray-700">
+            <li>✅ Instalaciones eléctricas</li>
+            <li>✅ Paneles eléctricos</li>
+            <li>✅ Inversores y UPS</li>
+            <li>✅ Mantenimiento preventivo</li>
+          </ul>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <section id="contacto" class="bg-gray-900 text-white py-16 px-6">
-        <div class="container mx-auto max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div>
-                <h2 class="text-3xl font-bold mb-6">¿Listo para iniciar tu proyecto?</h2>
-                <p class="text-gray-400 mb-8">Contáctanos hoy mismo para obtener asesoría personalizada y un presupuesto a la medida de tus necesidades.</p>
-                <div class="space-y-4">
-                    <div class="flex items-center gap-4">
-                        <i class="fas fa-phone text-orange-500 text-xl"></i>
-                        <span>809-444-7292</span>
-                    </div>
-                    <div class="flex items-center gap-4">
-                        <i class="fab fa-whatsapp text-green-500 text-xl"></i>
-                        <a href="https://wa.me/18094447292" target="_blank" class="hover:underline">Chatea con nosotros</a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="bg-white text-gray-800 p-8 rounded-2xl shadow-lg">
-                <h3 class="text-xl font-bold mb-4 text-slate-900">Escríbenos</h3>
-                <form class="space-y-4" action="https://formspree.io/f/xoqgkyre" method="POST">
-                    <div>
-                        <label class="block text-sm font-semibold mb-1">Nombre</label>
-                        <input type="text" name="name" required class="w-full px-4 py-2 border rounded-lg focus:outline-blue-500" placeholder="Tu nombre">
-                    </div>
-                    <div>
-                        <label class="block text-sm font-semibold mb-1">Teléfono</label>
-                        <input type="text" name="phone" required class="w-full px-4 py-2 border rounded-lg focus:outline-blue-500" placeholder="Tu teléfono">
-                    </div>
-                    <div>
-                        <label class="block text-sm font-semibold mb-1">¿Qué servicio necesitas?</label>
-                        <select name="service" class="w-full px-4 py-2 border rounded-lg focus:outline-blue-500">
-                            <option>Cámaras de Seguridad</option>
-                            <option>Redes / Telecomunicaciones</option>
-                            <option>Trabajo Eléctrico</option>
-                        </select>
-                    </div>
-                    <button type="submit" class="w-full bg-blue-600 text-white font-bold py-2 rounded-lg hover:bg-blue-700 transition">
-                        Enviar Consulta
-                    </button>
-                </form>
-            </div>
+  <!-- PROYECTOS -->
+  <section id="proyectos" class="py-24 bg-slate-900">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <p class="text-orange-400 font-bold tracking-widest">TRABAJOS REALIZADOS</p>
+        <h2 class="text-4xl md:text-5xl font-black mt-3">Proyectos destacados</h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="glass border border-white/10 rounded-3xl p-8">
+          <i class="fas fa-building-shield text-4xl text-orange-400 mb-5"></i>
+          <h3 class="text-2xl font-bold mb-3">Seguridad Comercial</h3>
+          <p class="text-gray-300">Instalación de cámaras, DVR/NVR, monitoreo móvil y puntos estratégicos para negocios.</p>
         </div>
-    </section>
 
-    <footer class="bg-slate-950 text-gray-500 text-center py-6 border-t border-gray-800 text-sm">
-        <p>&copy; 2026 Grupo Soltalius. Todos los derechos reservados.</p>
-    </footer>
+        <div class="glass border border-white/10 rounded-3xl p-8">
+          <i class="fas fa-server text-4xl text-blue-400 mb-5"></i>
+          <h3 class="text-2xl font-bold mb-3">Redes Empresariales</h3>
+          <p class="text-gray-300">Cableado estructurado, racks, switches, puntos de red y optimización de conectividad.</p>
+        </div>
+
+        <div class="glass border border-white/10 rounded-3xl p-8">
+          <i class="fas fa-screwdriver-wrench text-4xl text-yellow-400 mb-5"></i>
+          <h3 class="text-2xl font-bold mb-3">Instalaciones Eléctricas</h3>
+          <p class="text-gray-300">Mantenimiento, organización de paneles, inversores, UPS y sistemas de respaldo energético.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- POR QUE NOSOTROS -->
+  <section class="py-24 bg-white text-slate-900">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <p class="text-orange-500 font-bold tracking-widest">POR QUÉ ELEGIRNOS</p>
+        <h2 class="text-4xl md:text-5xl font-black mt-3 mb-6">
+          Servicio técnico confiable y garantizado
+        </h2>
+        <p class="text-gray-600 text-lg mb-8">
+          Trabajamos con planificación, equipos de calidad y personal capacitado para garantizar resultados seguros,
+          ordenados y duraderos.
+        </p>
+
+        <div class="space-y-4">
+          <p>✅ Cotizaciones claras y sin sorpresas</p>
+          <p>✅ Instalaciones limpias y profesionales</p>
+          <p>✅ Soporte después del servicio</p>
+          <p>✅ Soluciones para hogares, comercios y empresas</p>
+        </div>
+      </div>
+
+      <div class="bg-slate-950 text-white rounded-3xl p-8 shadow-2xl">
+        <h3 class="text-2xl font-black mb-6">Nuestra promesa</h3>
+        <p class="text-gray-300 mb-6">
+          No solo instalamos equipos: diseñamos soluciones completas para que tu propiedad esté protegida,
+          conectada y funcionando correctamente.
+        </p>
+        <a href="https://wa.me/18094447292" target="_blank"
+          class="inline-block bg-green-500 hover:bg-green-600 px-8 py-4 rounded-xl font-bold">
+          Hablar por WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="py-24 bg-gradient-to-br from-slate-950 to-blue-950">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12">
+      <div>
+        <p class="text-orange-400 font-bold tracking-widest">CONTACTO</p>
+        <h2 class="text-4xl md:text-5xl font-black mt-3 mb-6">
+          ¿Listo para iniciar tu proyecto?
+        </h2>
+        <p class="text-gray-300 text-lg mb-8">
+          Escríbenos y cuéntanos qué necesitas. Te orientamos y preparamos una cotización a tu medida.
+        </p>
+
+        <div class="space-y-5">
+          <p><i class="fas fa-phone text-orange-400 mr-3"></i> 809-444-7292</p>
+          <p><i class="fab fa-whatsapp text-green-400 mr-3"></i> WhatsApp disponible</p>
+          <p><i class="fas fa-location-dot text-blue-400 mr-3"></i> República Dominicana</p>
+        </div>
+      </div>
+
+      <div class="bg-white text-slate-900 p-8 rounded-3xl shadow-2xl">
+        <h3 class="text-2xl font-black mb-6">Solicitar cotización</h3>
+
+        <form action="https://formspree.io/f/xoqgkyre" method="POST" class="space-y-4">
+          <input type="text" name="name" required placeholder="Nombre"
+            class="w-full px-4 py-3 border rounded-xl outline-none focus:border-blue-500">
+
+          <input type="text" name="phone" required placeholder="Teléfono"
+            class="w-full px-4 py-3 border rounded-xl outline-none focus:border-blue-500">
+
+          <select name="service" class="w-full px-4 py-3 border rounded-xl outline-none focus:border-blue-500">
+            <option>Cámaras de seguridad</option>
+            <option>Redes / Telecomunicaciones</option>
+            <option>Servicios eléctricos</option>
+            <option>Otro servicio</option>
+          </select>
+
+          <textarea name="message" rows="4" placeholder="Cuéntanos qué necesitas"
+            class="w-full px-4 py-3 border rounded-xl outline-none focus:border-blue-500"></textarea>
+
+          <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-xl font-black">
+            Enviar consulta
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-black py-10 border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <h2 class="text-2xl font-black mb-2">
+        <span class="text-blue-500">GRUPO</span>
+        <span class="text-orange-500">SOLTALIUS</span>
+      </h2>
+      <p class="text-gray-400 mb-4">Seguridad, telecomunicaciones y electricidad.</p>
+      <p class="text-gray-600 text-sm">© 2026 Grupo Soltalius. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP FLOTANTE -->
+  <a href="https://wa.me/18094447292" target="_blank"
+    class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-3xl shadow-2xl z-50">
+    <i class="fab fa-whatsapp"></i>
+  </a>
 
 </body>
 </html>
