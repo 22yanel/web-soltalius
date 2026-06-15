@@ -220,51 +220,171 @@
   </section>
 
   <!-- CONTACTO -->
-  <section id="contacto" class="py-24 bg-gradient-to-br from-slate-950 to-blue-950">
-    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12">
-      <div>
-        <p class="text-orange-400 font-bold tracking-widest">CONTACTO</p>
-        <h2 class="text-4xl md:text-5xl font-black mt-3 mb-6">
-          ¿Listo para iniciar tu proyecto?
-        </h2>
-        <p class="text-gray-300 text-lg mb-8">
-          Escríbenos y cuéntanos qué necesitas. Te orientamos y preparamos una cotización a tu medida.
-        </p>
+ <section id="contacto" class="py-24 bg-gradient-to-br from-slate-950 to-blue-950">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
 
-        <div class="space-y-5">
-          <p><i class="fas fa-phone text-orange-400 mr-3"></i> 809-444-7292</p>
-          <p><i class="fab fa-whatsapp text-green-400 mr-3"></i> WhatsApp disponible</p>
-          <p><i class="fas fa-location-dot text-blue-400 mr-3"></i> República Dominicana</p>
+    <div>
+      <p class="text-orange-400 font-bold tracking-widest">CONTÁCTANOS</p>
+      <h2 class="text-4xl md:text-6xl font-black mt-3 mb-6">
+        ¡Hablemos de <span class="text-orange-400">tu proyecto!</span>
+      </h2>
+
+      <p class="text-gray-300 text-lg mb-10">
+        Estamos listos para ayudarte con soluciones en seguridad, redes, telecomunicaciones e instalaciones eléctricas.
+      </p>
+
+      <div class="space-y-6">
+        <div class="flex gap-4">
+          <div class="w-14 h-14 rounded-2xl bg-orange-500/20 border border-orange-400/40 flex items-center justify-center">
+            <i class="fas fa-shield-halved text-orange-400 text-2xl"></i>
+          </div>
+          <div>
+            <h4 class="font-black text-lg">Expertos certificados</h4>
+            <p class="text-gray-400">Personal técnico capacitado y con experiencia.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4">
+          <div class="w-14 h-14 rounded-2xl bg-blue-500/20 border border-blue-400/40 flex items-center justify-center">
+            <i class="fas fa-network-wired text-blue-400 text-2xl"></i>
+          </div>
+          <div>
+            <h4 class="font-black text-lg">Soluciones a medida</h4>
+            <p class="text-gray-400">Diseñamos sistemas según tu necesidad.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4">
+          <div class="w-14 h-14 rounded-2xl bg-green-500/20 border border-green-400/40 flex items-center justify-center">
+            <i class="fab fa-whatsapp text-green-400 text-2xl"></i>
+          </div>
+          <div>
+            <h4 class="font-black text-lg">Atención rápida</h4>
+            <p class="text-gray-400">Contáctanos por WhatsApp o correo.</p>
+          </div>
         </div>
       </div>
 
-      <div class="bg-white text-slate-900 p-8 rounded-3xl shadow-2xl">
-        <h3 class="text-2xl font-black mb-6">Solicitar cotización</h3>
+      <div class="mt-10 bg-white/10 border border-white/10 rounded-3xl p-6">
+        <p class="mb-3"><i class="fas fa-phone text-orange-400 mr-3"></i> 809-444-7292</p>
+        <p class="mb-3"><i class="fas fa-envelope text-blue-400 mr-3"></i> jjorge7@gmail.com</p>
+        <p><i class="fas fa-location-dot text-green-400 mr-3"></i> República Dominicana</p>
+      </div>
+    </div>
+
+    <div class="relative overflow-hidden bg-slate-950 text-white p-8 rounded-3xl shadow-2xl border border-blue-500/30">
+
+      <div class="absolute -top-20 -right-20 w-48 h-48 bg-orange-500/20 rounded-full blur-3xl"></div>
+      <div class="absolute -bottom-20 -left-20 w-48 h-48 bg-blue-500/20 rounded-full blur-3xl"></div>
+
+      <div class="relative z-10">
+        <div class="flex items-center gap-4 mb-6">
+          <div class="w-14 h-14 rounded-2xl bg-orange-500/20 border border-orange-400/40 flex items-center justify-center">
+            <i class="fas fa-paper-plane text-2xl text-orange-400"></i>
+          </div>
+          <div>
+            <p class="text-orange-400 text-sm font-bold tracking-widest">COTIZACIÓN GRATIS</p>
+            <h3 class="text-2xl font-black">Solicita tu cotización</h3>
+          </div>
+        </div>
+
+        <p class="text-gray-300 mb-6">
+          Completa tus datos y te contactaremos lo antes posible.
+        </p>
 
         <form action="https://formspree.io/f/xoqgkyre" method="POST" class="space-y-4">
-          <input type="text" name="name" required placeholder="Nombre"
-            class="w-full px-4 py-3 border rounded-xl outline-none focus:border-blue-500">
 
-          <input type="text" name="phone" required placeholder="Teléfono"
-            class="w-full px-4 py-3 border rounded-xl outline-none focus:border-blue-500">
+          <div>
+            <label class="block text-sm font-semibold mb-2 text-gray-300">Nombre completo</label>
+            <div class="flex items-center bg-white/10 border border-white/10 rounded-xl px-4">
+              <i class="fas fa-user text-orange-400 mr-3"></i>
+              <input type="text" name="name" required placeholder="Tu nombre completo"
+                class="w-full bg-transparent py-3 outline-none text-white placeholder-gray-400">
+            </div>
+          </div>
 
-          <select name="service" class="w-full px-4 py-3 border rounded-xl outline-none focus:border-blue-500">
-            <option>Cámaras de seguridad</option>
-            <option>Redes / Telecomunicaciones</option>
-            <option>Servicios eléctricos</option>
-            <option>Otro servicio</option>
-          </select>
+          <div>
+            <label class="block text-sm font-semibold mb-2 text-gray-300">Teléfono</label>
+            <div class="flex items-center bg-white/10 border border-white/10 rounded-xl px-4">
+              <i class="fas fa-phone text-green-400 mr-3"></i>
+              <input type="text" name="phone" required placeholder="809-000-0000"
+                class="w-full bg-transparent py-3 outline-none text-white placeholder-gray-400">
+            </div>
+          </div>
 
-          <textarea name="message" rows="4" placeholder="Cuéntanos qué necesitas"
-            class="w-full px-4 py-3 border rounded-xl outline-none focus:border-blue-500"></textarea>
+          <div>
+            <label class="block text-sm font-semibold mb-2 text-gray-300">Correo</label>
+            <div class="flex items-center bg-white/10 border border-white/10 rounded-xl px-4">
+              <i class="fas fa-envelope text-blue-400 mr-3"></i>
+              <input type="email" name="email" placeholder="Tu correo"
+                class="w-full bg-transparent py-3 outline-none text-white placeholder-gray-400">
+            </div>
+          </div>
 
-          <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-xl font-black">
-            Enviar consulta
+          <div>
+            <label class="block text-sm font-semibold mb-3 text-gray-300">¿Qué servicio necesitas?</label>
+
+            <div class="grid grid-cols-2 gap-3">
+              <label class="cursor-pointer">
+                <input type="radio" name="service" value="Cámaras de seguridad" class="peer hidden" checked>
+                <div class="border border-white/10 bg-white/10 peer-checked:border-orange-400 peer-checked:bg-orange-500/20 rounded-2xl p-4 text-center transition">
+                  <i class="fas fa-video text-2xl text-orange-400 mb-2"></i>
+                  <p class="text-sm font-bold">Cámaras</p>
+                </div>
+              </label>
+
+              <label class="cursor-pointer">
+                <input type="radio" name="service" value="Redes y telecomunicaciones" class="peer hidden">
+                <div class="border border-white/10 bg-white/10 peer-checked:border-blue-400 peer-checked:bg-blue-500/20 rounded-2xl p-4 text-center transition">
+                  <i class="fas fa-network-wired text-2xl text-blue-400 mb-2"></i>
+                  <p class="text-sm font-bold">Redes</p>
+                </div>
+              </label>
+
+              <label class="cursor-pointer">
+                <input type="radio" name="service" value="Servicios eléctricos" class="peer hidden">
+                <div class="border border-white/10 bg-white/10 peer-checked:border-yellow-400 peer-checked:bg-yellow-500/20 rounded-2xl p-4 text-center transition">
+                  <i class="fas fa-bolt text-2xl text-yellow-400 mb-2"></i>
+                  <p class="text-sm font-bold">Electricidad</p>
+                </div>
+              </label>
+
+              <label class="cursor-pointer">
+                <input type="radio" name="service" value="Otro servicio" class="peer hidden">
+                <div class="border border-white/10 bg-white/10 peer-checked:border-green-400 peer-checked:bg-green-500/20 rounded-2xl p-4 text-center transition">
+                  <i class="fas fa-screwdriver-wrench text-2xl text-green-400 mb-2"></i>
+                  <p class="text-sm font-bold">Otro</p>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-sm font-semibold mb-2 text-gray-300">Mensaje</label>
+            <textarea name="message" rows="4" placeholder="Ejemplo: necesito cámaras para mi negocio..."
+              class="w-full bg-white/10 border border-white/10 rounded-xl px-4 py-3 outline-none text-white placeholder-gray-400"></textarea>
+          </div>
+
+          <button type="submit"
+            class="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white py-4 rounded-xl font-black text-lg shadow-lg shadow-orange-500/30 transition">
+            <i class="fas fa-paper-plane mr-2"></i> Enviar solicitud
           </button>
+
+          <a href="https://wa.me/18094447292" target="_blank"
+            class="block w-full text-center border border-green-400/40 bg-green-500/10 hover:bg-green-500/20 text-green-400 py-4 rounded-xl font-black transition">
+            <i class="fab fa-whatsapp mr-2"></i> Hablar directo por WhatsApp
+          </a>
+
+          <p class="text-center text-xs text-gray-400">
+            También puedes escribirnos a <span class="text-orange-400">jjorge7@gmail.com</span>
+          </p>
+
         </form>
       </div>
     </div>
-  </section>
+
+  </div>
+</section>
 
   <!-- FOOTER -->
   <footer class="bg-black py-10 border-t border-white/10">
