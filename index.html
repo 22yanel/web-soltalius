@@ -16,30 +16,47 @@
 <body class="bg-slate-950 text-white font-sans">
 
   <!-- HEADER -->
-  <header class="fixed top-0 left-0 w-full z-50 bg-slate-950/80 backdrop-blur border-b border-white/10">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-      
-<a href="#inicio" class="flex items-center gap-3">
-  <img 
-    src="logo-soltalius.jpg" 
-    alt="Grupo Soltalius S.R.L." 
-    class="h-16 w-auto rounded-xl object-contain"
-  >
-</a>
-      <nav class="hidden md:flex gap-8 text-sm font-semibold">
-        <a href="#inicio" class="hover:text-orange-400">Inicio</a>
-        <a href="#servicios" class="hover:text-orange-400">Servicios</a>
-        <a href="#proyectos" class="hover:text-orange-400">Proyectos</a>
-        <a href="#contacto" class="hover:text-orange-400">Contacto</a>
-      </nav>
+<!-- HEADER -->
+<header class="fixed top-0 left-0 w-full z-50 bg-slate-950/90 backdrop-blur-xl border-b border-white/10 shadow-lg shadow-black/30">
+  <div class="max-w-7xl mx-auto px-4 md:px-6 py-3 flex justify-between items-center">
+    
+    <!-- LOGO -->
+    <a href="#inicio" class="flex items-center gap-4 group">
+      <div class="bg-white rounded-2xl p-2 shadow-xl ring-1 ring-white/20 group-hover:scale-105 transition">
+        <img 
+          src="logo-soltalius.jpg" 
+          alt="Grupo Soltalius S.R.L." 
+          class="h-12 md:h-14 w-auto object-contain drop-shadow-[0_4px_14px_rgba(0,0,0,0.25)]"
+        >
+      </div>
 
-      <a href="https://wa.me/18094447292" target="_blank"
-        class="bg-green-500 hover:bg-green-600 px-5 py-2 rounded-full font-bold flex items-center gap-2">
-        <i class="fab fa-whatsapp"></i> Escríbenos
-      </a>
-    </div>
-  </header>
+      <div class="hidden sm:block leading-tight">
+        <h2 class="text-white font-black text-lg md:text-xl tracking-wide">
+          Grupo Soltalius, S.R.L.
+        </h2>
+        <p class="text-orange-400 text-[10px] md:text-xs font-bold tracking-[0.22em] uppercase">
+          Seguridad • Redes • Electricidad
+        </p>
+      </div>
+    </a>
 
+    <!-- MENU -->
+    <nav class="hidden lg:flex gap-8 text-sm font-semibold text-gray-200">
+      <a href="#inicio" class="hover:text-orange-400 transition">Inicio</a>
+      <a href="#servicios" class="hover:text-orange-400 transition">Servicios</a>
+      <a href="#proyectos" class="hover:text-orange-400 transition">Proyectos</a>
+      <a href="#contacto" class="hover:text-orange-400 transition">Contacto</a>
+    </nav>
+
+    <!-- BOTON WHATSAPP -->
+    <a href="https://wa.me/18094447292" target="_blank"
+      class="bg-green-500 hover:bg-green-600 px-4 md:px-5 py-2.5 rounded-full font-black text-sm flex items-center gap-2 shadow-lg shadow-green-500/20 transition">
+      <i class="fab fa-whatsapp text-lg"></i>
+      <span class="hidden sm:inline">Escríbenos</span>
+    </a>
+
+  </div>
+</header>
   <!-- HERO -->
   <section id="inicio" class="min-h-screen flex items-center pt-28 bg-gradient-to-br from-slate-950 via-blue-950 to-slate-900">
     <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
@@ -390,19 +407,76 @@
 </section>
 
   <!-- FOOTER -->
-  <footer class="bg-black py-10 border-t border-white/10">
-    <div class="max-w-7xl mx-auto px-6 text-center">
-      <div class="flex justify-center mb-4">
-  <img 
-    src="logo-soltalius.jpg" 
-    alt="Grupo Soltalius S.R.L." 
-    class="h-24 w-auto rounded-xl object-contain"
-  >
-</div>
-      <p class="text-gray-400 mb-4">Seguridad, telecomunicaciones y electricidad.</p>
-      <p class="text-gray-600 text-sm">© 2026 Grupo Soltalius. Todos los derechos reservados.</p>
+<!-- FOOTER -->
+<footer class="bg-black py-12 border-t border-white/10">
+  <div class="max-w-7xl mx-auto px-6">
+    
+    <div class="grid md:grid-cols-3 gap-10 items-center text-center md:text-left">
+      
+      <!-- LOGO FOOTER -->
+      <div class="flex flex-col items-center md:items-start">
+        <div class="bg-white rounded-2xl p-3 shadow-xl mb-4">
+          <img 
+            src="logo-soltalius.jpg" 
+            alt="Grupo Soltalius S.R.L." 
+            class="h-20 md:h-24 w-auto object-contain drop-shadow-[0_4px_14px_rgba(0,0,0,0.25)]"
+          >
+        </div>
+
+        <h2 class="text-xl md:text-2xl font-black text-white">
+          Grupo Soltalius, S.R.L.
+        </h2>
+        <p class="text-orange-400 text-xs md:text-sm font-semibold tracking-widest uppercase mt-1">
+          Seguridad, telecomunicaciones y electricidad
+        </p>
+      </div>
+
+      <!-- SERVICIOS -->
+      <div>
+        <h3 class="text-white font-black text-lg mb-4">Servicios</h3>
+        <ul class="space-y-2 text-gray-400 text-sm">
+          <li>Cámaras de seguridad</li>
+          <li>Redes y telecomunicaciones</li>
+          <li>Instalaciones eléctricas</li>
+          <li>Control de acceso</li>
+        </ul>
+      </div>
+
+      <!-- CONTACTO -->
+      <div>
+        <h3 class="text-white font-black text-lg mb-4">Contacto</h3>
+        <div class="space-y-3 text-gray-400 text-sm">
+          <p>
+            <i class="fas fa-phone text-orange-400 mr-2"></i>
+            809-444-7292
+          </p>
+          <p>
+            <i class="fas fa-envelope text-blue-400 mr-2"></i>
+            jjorge7@gmail.com
+          </p>
+          <p>
+            <i class="fas fa-location-dot text-green-400 mr-2"></i>
+            República Dominicana
+          </p>
+        </div>
+
+        <a href="https://wa.me/18094447292" target="_blank"
+          class="inline-flex items-center gap-2 mt-5 bg-green-500 hover:bg-green-600 text-white px-5 py-3 rounded-full font-black text-sm transition shadow-lg shadow-green-500/20">
+          <i class="fab fa-whatsapp"></i>
+          WhatsApp
+        </a>
+      </div>
+
     </div>
-  </footer>
+
+    <div class="border-t border-white/10 mt-10 pt-6 text-center">
+      <p class="text-gray-600 text-sm">
+        © 2026 Grupo Soltalius, S.R.L. Todos los derechos reservados.
+      </p>
+    </div>
+
+  </div>
+</footer>
 
   <!-- WHATSAPP FLOTANTE -->
   <a href="https://wa.me/18094447292" target="_blank"
