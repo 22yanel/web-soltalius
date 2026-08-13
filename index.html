@@ -111,6 +111,49 @@
       box-shadow: 0 0 0 3px rgba(234, 106, 32, 0.15);
     }
 
+    .gallery-card {
+      position: relative;
+      height: 25rem;
+      overflow: hidden;
+      border-radius: 1.25rem;
+      cursor: pointer;
+      background: #0f172a;
+      box-shadow: 0 14px 35px rgba(15, 23, 42, 0.14);
+      text-align: left;
+    }
+
+    .gallery-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.45s ease;
+    }
+
+    .gallery-card:hover img,
+    .gallery-card:focus-visible img {
+      transform: scale(1.055);
+    }
+
+    .gallery-card:focus-visible {
+      outline: 4px solid rgba(234, 106, 32, 0.45);
+      outline-offset: 4px;
+    }
+
+    .gallery-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 1.5rem;
+      color: white;
+      background: linear-gradient(to top, rgba(15, 23, 42, 0.92), rgba(15, 23, 42, 0.08) 65%);
+    }
+
+    #gallery-modal.is-open {
+      display: flex;
+    }
+
     .brand-logo {
       width: 72px !important;
       height: 72px !important;
@@ -612,15 +655,15 @@
 
   </section>
 
-  <!-- PROYECTOS -->
+  <!-- TRABAJOS REALIZADOS -->
   <section id="proyectos" class="py-24 bg-white">
 
     <div class="container mx-auto px-6">
 
-      <div class="text-center mb-16">
+      <div class="text-center mb-14">
 
         <p class="text-orange-500 uppercase tracking-widest font-semibold">
-          Nuestros Proyectos
+          Experiencia en acción
         </p>
 
         <h2 class="text-4xl md:text-5xl font-bold text-slate-800 mt-4">
@@ -628,78 +671,74 @@
         </h2>
 
         <p class="text-gray-600 mt-6 max-w-3xl mx-auto">
-          Estos son algunos de los tipos de proyectos que realizamos para
-          nuestros clientes.
+          Conoce algunos de nuestros trabajos reales en instalaciones eléctricas,
+          redes, climatización y soluciones para empresas.
         </p>
 
       </div>
 
-      <div class="grid lg:grid-cols-3 gap-8">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-7">
 
-        <!-- REDES Y COMUNICACIONES -->
-        <div class="service-card">
+        <button type="button" class="gallery-card" aria-label="Ampliar trabajo de redes y cableado estructurado" onclick="openGallery('galeria-redes.webp', 'Redes y cableado estructurado')">
+          <img src="galeria-redes.webp" alt="Instalación real de cableado estructurado en rack" loading="lazy">
+          <span class="gallery-overlay">
+            <span class="text-orange-300 text-sm font-semibold uppercase tracking-wider">Comunicaciones</span>
+            <span class="text-xl font-bold mt-1">Redes y cableado estructurado</span>
+          </span>
+        </button>
 
-          <img
-            src="proyecto-redes.jpeg"
-            alt="Instalación profesional de rack y cableado estructurado"
-            loading="lazy"
-            class="project-image rounded-xl mb-6"
-          >
+        <button type="button" class="gallery-card" aria-label="Ampliar trabajo de paneles eléctricos" onclick="openGallery('galeria-paneles.webp', 'Paneles eléctricos')">
+          <img src="galeria-paneles.webp" alt="Paneles eléctricos instalados profesionalmente" loading="lazy">
+          <span class="gallery-overlay">
+            <span class="text-orange-300 text-sm font-semibold uppercase tracking-wider">Electromecánica</span>
+            <span class="text-xl font-bold mt-1">Paneles eléctricos</span>
+          </span>
+        </button>
 
-          <h3 class="text-2xl font-bold mb-3">
-            Redes y Comunicaciones
-          </h3>
+        <button type="button" class="gallery-card" aria-label="Ampliar trabajo de control de potencia" onclick="openGallery('galeria-contactores.webp', 'Control de potencia industrial')">
+          <img src="galeria-contactores.webp" alt="Contactores y cableado de control de potencia industrial" loading="lazy">
+          <span class="gallery-overlay">
+            <span class="text-orange-300 text-sm font-semibold uppercase tracking-wider">Industria</span>
+            <span class="text-xl font-bold mt-1">Control de potencia industrial</span>
+          </span>
+        </button>
 
-          <p class="text-gray-600">
-            Instalación de racks, cableado estructurado, patch panels,
-            switches y redes empresariales.
-          </p>
+        <button type="button" class="gallery-card" aria-label="Ampliar trabajo de tableros de distribución" onclick="openGallery('galeria-tableros.webp', 'Tableros de distribución')">
+          <img src="galeria-tableros.webp" alt="Tableros de distribución y canalización eléctrica terminados" loading="lazy">
+          <span class="gallery-overlay">
+            <span class="text-orange-300 text-sm font-semibold uppercase tracking-wider">Electricidad</span>
+            <span class="text-xl font-bold mt-1">Tableros de distribución</span>
+          </span>
+        </button>
 
-        </div>
+        <button type="button" class="gallery-card" aria-label="Ampliar trabajo de fabricación e instalación de barandas" onclick="openGallery('galeria-barandas.webp', 'Barandas en acero inoxidable')">
+          <img src="galeria-barandas.webp" alt="Barandas de acero inoxidable instaladas en rampa y escaleras" loading="lazy">
+          <span class="gallery-overlay">
+            <span class="text-orange-300 text-sm font-semibold uppercase tracking-wider">Construcción</span>
+            <span class="text-xl font-bold mt-1">Barandas en acero inoxidable</span>
+          </span>
+        </button>
 
-        <!-- SEGURIDAD ELECTRÓNICA -->
-        <div class="service-card">
+        <button type="button" class="gallery-card" aria-label="Ampliar trabajo de climatización comercial" onclick="openGallery('galeria-climatizacion.webp', 'Climatización comercial')">
+          <img src="galeria-climatizacion.webp" alt="Instalación de unidades de climatización comercial en azotea" loading="lazy">
+          <span class="gallery-overlay">
+            <span class="text-orange-300 text-sm font-semibold uppercase tracking-wider">Climatización</span>
+            <span class="text-xl font-bold mt-1">Climatización comercial</span>
+          </span>
+        </button>
 
-          <img
-            src="https://images.unsplash.com/photo-1558002038-1055907df827?w=800"
-            alt="Sistema moderno de seguridad electrónica"
-            loading="lazy"
-            class="project-image rounded-xl mb-6"
-          >
+      </div>
 
-          <h3 class="text-2xl font-bold mb-3">
-            Seguridad Electrónica
-          </h3>
-
-          <p class="text-gray-600">
-            Instalación de cámaras, alarmas, control de acceso y sistemas
-            inteligentes de vigilancia.
-          </p>
-
-        </div>
-
-        <!-- INSTALACIONES ELÉCTRICAS -->
-        <div class="service-card">
-
-          <img
-            src="instalaciones-electricas.jpeg"
-            alt="Panel e instalación eléctrica profesional"
-            loading="lazy"
-            class="project-image rounded-xl mb-6"
-          >
-
-          <h3 class="text-2xl font-bold mb-3">
-            Instalaciones Eléctricas
-          </h3>
-
-          <p class="text-gray-600">
-            Diseño, instalación y mantenimiento de paneles eléctricos,
-            tableros de distribución y soluciones electromecánicas para
-            empresas, industrias y residencias.
-          </p>
-
-        </div>
-
+      <div class="text-center mt-12">
+        <a
+          href="https://www.instagram.com/gruposoltalius/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-3 bg-slate-900 hover:bg-slate-800 text-white px-7 py-4 rounded-xl font-semibold transition"
+        >
+          <i class="fab fa-instagram text-xl"></i>
+          Ver más trabajos en Instagram
+        </a>
       </div>
 
     </div>
@@ -1008,6 +1047,62 @@
     </div>
 
   </footer>
+
+  <!-- VISOR DE LA GALERÍA -->
+  <div
+    id="gallery-modal"
+    class="fixed inset-0 z-[1000] hidden items-center justify-center bg-slate-950/95 p-4 sm:p-8"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Imagen ampliada de trabajo realizado"
+    onclick="closeGallery(event)"
+  >
+    <button
+      type="button"
+      onclick="closeGallery()"
+      class="absolute top-5 right-5 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 text-white text-2xl"
+      aria-label="Cerrar imagen"
+    >
+      <i class="fas fa-xmark"></i>
+    </button>
+
+    <figure class="max-w-5xl w-full text-center" onclick="event.stopPropagation()">
+      <img
+        id="gallery-modal-image"
+        src=""
+        alt=""
+        class="max-h-[78vh] w-auto max-w-full mx-auto rounded-2xl object-contain shadow-2xl"
+      >
+      <figcaption id="gallery-modal-caption" class="text-white text-lg font-semibold mt-5"></figcaption>
+    </figure>
+  </div>
+
+  <script>
+    const galleryModal = document.getElementById('gallery-modal');
+    const galleryModalImage = document.getElementById('gallery-modal-image');
+    const galleryModalCaption = document.getElementById('gallery-modal-caption');
+
+    function openGallery(image, title) {
+      galleryModalImage.src = image;
+      galleryModalImage.alt = title;
+      galleryModalCaption.textContent = title;
+      galleryModal.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeGallery(event) {
+      if (event && event.target !== galleryModal) return;
+      galleryModal.classList.remove('is-open');
+      galleryModalImage.src = '';
+      document.body.style.overflow = '';
+    }
+
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape' && galleryModal.classList.contains('is-open')) {
+        closeGallery();
+      }
+    });
+  </script>
 
   <!-- BOTÓN FLOTANTE DE WHATSAPP -->
   <a
