@@ -154,6 +154,10 @@
       display: flex;
     }
 
+    #mobile-menu.is-open {
+      display: block;
+    }
+
     .brand-logo {
       width: 72px !important;
       height: 72px !important;
@@ -269,17 +273,41 @@
 
       </nav>
 
-      <!-- WHATSAPP -->
-      <a
-        href="https://wa.me/18094447292?text=Hola%20Grupo%20Soltalius%2C%20deseo%20solicitar%20una%20cotizaci%C3%B3n."
-        target="_blank"
-        rel="noopener noreferrer"
-        class="bg-green-500 hover:bg-green-600 text-white px-5 py-3 rounded-xl font-semibold transition"
-      >
-        <i class="fab fa-whatsapp mr-2"></i>
-        <span class="hidden md:inline">WhatsApp</span>
-      </a>
+      <div class="flex items-center gap-3">
+        <!-- WHATSAPP -->
+        <a
+          href="https://wa.me/18094447292?text=Hola%20Grupo%20Soltalius%2C%20deseo%20solicitar%20una%20cotizaci%C3%B3n."
+          target="_blank"
+          rel="noopener noreferrer"
+          class="bg-green-500 hover:bg-green-600 text-white px-4 md:px-5 py-3 rounded-xl font-semibold transition"
+        >
+          <i class="fab fa-whatsapp md:mr-2"></i>
+          <span class="hidden md:inline">WhatsApp</span>
+        </a>
 
+        <button
+          id="mobile-menu-button"
+          type="button"
+          class="lg:hidden w-12 h-12 rounded-xl border border-gray-200 text-slate-800 hover:bg-gray-100 transition"
+          aria-label="Abrir menú"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+        >
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+      </div>
+
+    </div>
+
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 shadow-lg">
+      <nav class="container px-6 py-4 grid gap-1 font-semibold">
+        <a href="#inicio" class="mobile-menu-link px-4 py-3 rounded-lg hover:bg-orange-50 hover:text-orange-500">Inicio</a>
+        <a href="#servicios" class="mobile-menu-link px-4 py-3 rounded-lg hover:bg-orange-50 hover:text-orange-500">Servicios</a>
+        <a href="#cobertura" class="mobile-menu-link px-4 py-3 rounded-lg hover:bg-orange-50 hover:text-orange-500">Cobertura</a>
+        <a href="#nosotros" class="mobile-menu-link px-4 py-3 rounded-lg hover:bg-orange-50 hover:text-orange-500">Nosotros</a>
+        <a href="#proyectos" class="mobile-menu-link px-4 py-3 rounded-lg hover:bg-orange-50 hover:text-orange-500">Proyectos</a>
+        <a href="#contacto" class="mobile-menu-link px-4 py-3 rounded-lg hover:bg-orange-50 hover:text-orange-500">Contacto</a>
+      </nav>
     </div>
   </header>
 
@@ -294,7 +322,12 @@
           Soluciones Electromecánicas, Seguridad y Comunicaciones
         </h2>
 
-        <p class="mt-8 text-lg text-gray-600 leading-8">
+        <div class="inline-flex items-center gap-3 mt-7 bg-orange-50 border border-orange-200 text-orange-700 px-5 py-3 rounded-full font-bold">
+          <i class="fas fa-medal text-orange-500"></i>
+          Más de 16 años de experiencia
+        </div>
+
+        <p class="mt-6 text-lg text-gray-600 leading-8">
           Grupo Soltalius S.R.L. ofrece soluciones integrales para hogares,
           comercios e industrias mediante servicios especializados en
           instalaciones electromecánicas, sistemas de seguridad electrónica
@@ -461,6 +494,53 @@
 
     </div>
 
+  </section>
+
+  <!-- COBERTURA NACIONAL -->
+  <section id="cobertura" class="py-24 bg-slate-900 text-white">
+    <div class="container mx-auto px-6">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <p class="text-orange-400 uppercase tracking-widest font-semibold">
+            Cobertura nacional
+          </p>
+          <h2 class="text-4xl md:text-5xl font-bold mt-4">
+            Llegamos a toda la República Dominicana
+          </h2>
+          <p class="text-slate-300 text-lg leading-8 mt-6">
+            Atendemos proyectos residenciales, comerciales e industriales en las
+            32 provincias y el Distrito Nacional. Coordinamos visitas, transporte
+            técnico y ejecución de proyectos en cualquier punto del país.
+          </p>
+          <div class="flex flex-wrap gap-3 mt-8">
+            <span class="bg-white/10 border border-white/15 px-4 py-2 rounded-full">Gran Santo Domingo</span>
+            <span class="bg-white/10 border border-white/15 px-4 py-2 rounded-full">Cibao y Norte</span>
+            <span class="bg-white/10 border border-white/15 px-4 py-2 rounded-full">Sur</span>
+            <span class="bg-white/10 border border-white/15 px-4 py-2 rounded-full">Este</span>
+          </div>
+          <a
+            href="https://wa.me/18094447292?text=Hola%20Grupo%20Soltalius%2C%20necesito%20un%20servicio%20en%20mi%20provincia."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-3 mt-9 bg-orange-500 hover:bg-orange-600 text-white px-7 py-4 rounded-xl font-bold transition"
+          >
+            <i class="fab fa-whatsapp text-xl"></i>
+            Consultar cobertura
+          </a>
+        </div>
+
+        <div class="relative">
+          <div class="bg-white/10 border border-white/15 rounded-3xl p-10 text-center shadow-2xl">
+            <div class="w-40 h-40 mx-auto rounded-full bg-orange-500/15 border border-orange-400/30 flex items-center justify-center">
+              <i class="fas fa-map-location-dot text-7xl text-orange-400"></i>
+            </div>
+            <div class="mt-7 text-6xl">🇩🇴</div>
+            <h3 class="text-3xl font-bold mt-5">Todo el país</h3>
+            <p class="text-slate-300 mt-3">32 provincias + Distrito Nacional</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- POR QUÉ ELEGIRNOS -->
@@ -727,7 +807,7 @@
           </span>
         </button>
 
-        <button type="button" class="gallery-card" aria-label="Ampliar trabajo de transporte y logística de plantas eléctricas" onclick="openGallery('galeria-logistica-plantas.webp', 'Transporte y logística de plantas eléctricas')">
+        <button type="button" class="gallery-card md:col-span-2 md:w-[calc(50%-0.875rem)] md:justify-self-center lg:col-span-1 lg:col-start-2 lg:w-full" aria-label="Ampliar trabajo de transporte y logística de plantas eléctricas" onclick="openGallery('galeria-logistica-plantas.webp', 'Transporte y logística de plantas eléctricas')">
           <img src="galeria-logistica-plantas.webp" alt="Planta eléctrica gestionada por Grupo Soltalius para transporte y logística" loading="lazy">
           <span class="gallery-overlay">
             <span class="text-orange-300 text-sm font-semibold uppercase tracking-wider">Logística</span>
@@ -1109,6 +1189,32 @@
       if (event.key === 'Escape' && galleryModal.classList.contains('is-open')) {
         closeGallery();
       }
+    });
+
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileMenuIcon = mobileMenuButton.querySelector('i');
+
+    function closeMobileMenu() {
+      mobileMenu.classList.remove('is-open');
+      mobileMenuButton.setAttribute('aria-expanded', 'false');
+      mobileMenuButton.setAttribute('aria-label', 'Abrir menú');
+      mobileMenuIcon.className = 'fas fa-bars text-xl';
+    }
+
+    mobileMenuButton.addEventListener('click', function () {
+      const isOpen = mobileMenu.classList.toggle('is-open');
+      mobileMenuButton.setAttribute('aria-expanded', String(isOpen));
+      mobileMenuButton.setAttribute('aria-label', isOpen ? 'Cerrar menú' : 'Abrir menú');
+      mobileMenuIcon.className = isOpen ? 'fas fa-xmark text-xl' : 'fas fa-bars text-xl';
+    });
+
+    document.querySelectorAll('.mobile-menu-link').forEach(function (link) {
+      link.addEventListener('click', closeMobileMenu);
+    });
+
+    window.addEventListener('resize', function () {
+      if (window.innerWidth >= 1024) closeMobileMenu();
     });
   </script>
 
