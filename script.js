@@ -19,3 +19,24 @@ document.querySelectorAll('[data-gallery-image]').forEach(card => card.addEventL
 if(closeButton) closeButton.addEventListener('click', closeGallery);
 if(modal) modal.addEventListener('click', e => { if(e.target===modal) closeGallery(); });
 document.addEventListener('keydown', e => { if(e.key==='Escape') closeGallery(); });
+
+const contactForm = document.querySelector('.contact-form');
+if (contactForm) {
+  contactForm.addEventListener('submit', () => {
+    if (typeof gtag === 'function') {
+      gtag('event', 'generate_lead', {
+        event_category: 'contacto',
+        event_label: 'Solicitud de cotización'
+      });
+    }
+  });
+}
+document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
+  link.addEventListener('click', () => {
+    if (typeof gtag === 'function') {
+      gtag('event', 'contact', {
+        method: 'WhatsApp'
+      });
+    }
+  });
+});
